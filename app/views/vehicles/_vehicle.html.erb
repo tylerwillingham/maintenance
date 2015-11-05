@@ -8,6 +8,9 @@
   <%= vehicle.model %>
 </td>
 <td>
+  <%= vehicle.mileage %>
+</td>
+<td>
   <% if vehicle.currently_owned? %>
     <%=t :yes %>
   <% else %>
