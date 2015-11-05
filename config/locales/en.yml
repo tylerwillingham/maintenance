@@ -16,4 +16,15 @@ en:
         "%B %d"
 
   titles:
-    application: Maintenance
+    application: "Maintenance"
+
+  "yes": "Yes"
+  "no": "No"
+
+  vehicles:
+    year: "Year"
+    make: "Make"
+    model: "Model"
+    current: "Current"
+    currently_owned: "Currently Owned"
+    your_vehicles: "Your Vehicles"

@@ -1,0 +1,13 @@
+<h1><%=t "vehicles.your_vehicles" %></h1>
+<table>
+  <thead>
+    <th><%=t "vehicles.year" %></th>
+    <th><%=t "vehicles.make" %></th>
+    <th><%=t "vehicles.model" %></th>
+    <th><%=t "vehicles.current" %>?</th>
+  </thead>
+  <tbody>
+    <%= render @vehicles %>
+  </tbody>
+</table>
+

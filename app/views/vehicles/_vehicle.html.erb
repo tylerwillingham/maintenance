@@ -1,0 +1,16 @@
+<td>
+  <%= vehicle.year %>
+</td>
+<td>
+  <%= vehicle.make %>
+</td>
+<td>
+  <%= vehicle.model %>
+</td>
+<td>
+  <% if vehicle.currently_owned? %>
+    <%=t :yes %>
+  <% else %>
+    <%=t :no %>
+  <% end %>
+</td>
