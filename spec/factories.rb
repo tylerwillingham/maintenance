@@ -11,5 +11,6 @@ FactoryGirl.define do
     association :vehicle
     subject "Oil Change"
     mileage 23_000.1
+    performed_on 100.days.ago
   end
 end
