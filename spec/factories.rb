@@ -4,6 +4,7 @@ FactoryGirl.define do
     make "BMW"
     model "M3"
     vin "WBSWD93558PY39440"
+    mileage 69_832.3
   end
 
   factory :service_record do

@@ -25,6 +25,7 @@ en:
     year: "Year"
     make: "Make"
     model: "Model"
+    mileage: "Mileage"
     current: "Current"
     currently_owned: "Currently Owned"
     your_vehicles: "Your Vehicles"
