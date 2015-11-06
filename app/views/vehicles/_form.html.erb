@@ -4,5 +4,8 @@
   <%= form.input :model %>
   <%= form.input :mileage %>
   <%= form.input :currently_owned, as: :boolean %>
+
+  <%= form.input :owner_id, as: :hidden %>
+
   <%= form.button :submit, "Create" %>
 <% end %>

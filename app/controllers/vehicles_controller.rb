@@ -2,11 +2,11 @@ class VehiclesController < ApplicationController
   before_action :require_login
 
   def index
-    @vehicles = Vehicle.all
+    @vehicles = current_user.vehicles
   end
 
   def new
-    @vehicle = Vehicle.new
+    @vehicle = current_user.vehicles.build
   end
 
   def create
@@ -23,6 +23,6 @@ class VehiclesController < ApplicationController
 
   def vehicle_params
     params.require(:vehicle).permit(:year, :make, :model, :vin, :mileage,
-                                    :currently_owned)
+                                    :currently_owned, :owner_id)
   end
 end

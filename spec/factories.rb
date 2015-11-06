@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :vehicle do
+    association :owner, factory: :user
     year 2008
     make "BMW"
     model "M3"
