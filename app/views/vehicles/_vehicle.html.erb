@@ -1,19 +1,21 @@
-<td>
-  <%= vehicle.year %>
-</td>
-<td>
-  <%= vehicle.make %>
-</td>
-<td>
-  <%= vehicle.model %>
-</td>
-<td>
-  <%= vehicle.mileage %>
-</td>
-<td>
-  <% if vehicle.currently_owned? %>
-    <%=t :yes %>
-  <% else %>
-    <%=t :no %>
-  <% end %>
-</td>
+<tr>
+  <td>
+    <%= vehicle.year %>
+  </td>
+  <td>
+    <%= vehicle.make %>
+  </td>
+  <td>
+    <%= vehicle.model %>
+  </td>
+  <td>
+    <%= vehicle.mileage %>
+  </td>
+  <td>
+    <% if vehicle.currently_owned? %>
+      <%=t :yes %>
+    <% else %>
+      <%=t :no %>
+    <% end %>
+  </td>
+</tr>

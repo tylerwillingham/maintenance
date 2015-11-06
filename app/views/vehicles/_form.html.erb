@@ -1,0 +1,8 @@
+<%= simple_form_for @vehicle do |form| %>
+  <%= form.input :year %>
+  <%= form.input :make %>
+  <%= form.input :model %>
+  <%= form.input :mileage %>
+  <%= form.input :currently_owned, as: :boolean %>
+  <%= form.button :submit, "Create" %>
+<% end %>
