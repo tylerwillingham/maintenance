@@ -13,4 +13,9 @@ FactoryGirl.define do
     mileage 23_000.1
     performed_on 100.days.ago
   end
+
+  factory :user do
+    email "someone@something.com"
+    password "this_is_my_pass"
+  end
 end

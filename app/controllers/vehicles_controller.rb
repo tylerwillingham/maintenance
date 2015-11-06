@@ -1,4 +1,6 @@
 class VehiclesController < ApplicationController
+  before_action :require_login
+
   def index
     @vehicles = Vehicle.all
   end
