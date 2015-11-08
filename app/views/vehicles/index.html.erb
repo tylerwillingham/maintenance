@@ -1,0 +1,23 @@
+<h1><%=t "vehicles.your_vehicles" %></h1>
+
+<div>
+  <%= link_to "Add a new vehicle", new_vehicle_path %>
+</div>
+
+<table class="table-minimal">
+  <thead>
+    <tr>
+      <th><%=t "vehicles.year" %></th>
+      <th><%=t "vehicles.make" %></th>
+      <th><%=t "vehicles.model" %></th>
+      <th><%=t "vehicles.mileage" %></th>
+      <th><%=t "vehicles.current" %>?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <%= render @vehicles %>
+    </tr>
+  </tbody>
+</table>
+

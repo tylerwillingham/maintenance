@@ -1,0 +1,31 @@
+en:
+  date:
+    formats:
+      default:
+        "%m/%d/%Y"
+      with_weekday:
+        "%a %m/%d/%y"
+
+  time:
+    formats:
+      default:
+        "%a, %b %-d, %Y at %r"
+      date:
+        "%b %-d, %Y"
+      short:
+        "%B %d"
+
+  titles:
+    application: "Maintenance"
+
+  "yes": "Yes"
+  "no": "No"
+
+  vehicles:
+    year: "Year"
+    make: "Make"
+    model: "Model"
+    mileage: "Mileage"
+    current: "Current"
+    currently_owned: "Currently Owned"
+    your_vehicles: "Your Vehicles"
