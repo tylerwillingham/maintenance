@@ -4,7 +4,10 @@
   <%= form.input :model %>
   <%= form.input :vin, label: "VIN" %>
   <%= form.input :mileage %>
+
   <%= form.input :currently_owned, as: :boolean %>
+  <%= form.input :purchase_date, as: :date, html5: true %>
+  <%= form.input :sale_date, as: :date, html5: true %>
 
   <%= form.input :owner_id, as: :hidden %>
 

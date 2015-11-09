@@ -33,3 +33,4 @@ en:
     currently_owned: "Currently Owned"
     your_vehicles: "Your Vehicles"
     unable_to_delete: "We were unable to delete that vehicle"
+    must_be_after_purchase_date: "must be after the Purchase Date"
