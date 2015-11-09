@@ -5,9 +5,10 @@ RSpec.describe ServiceRecord, type: :model do
   it { should belong_to(:vehicle).dependent(:destroy) }
  
   # Validations
-  it { should validate_presence_of(:vehicle) }
-  it { should validate_presence_of(:subject) }
-  it { should validate_presence_of(:performed_on) }
+  it { should validate_presence_of :vehicle }
+  it { should validate_presence_of :subject }
+  it { should validate_presence_of :performed_on }
+  it { should_validate_presence_of :mileage }
 
   context ".to_s" do
     it "should return the subject" do
