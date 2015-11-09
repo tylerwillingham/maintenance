@@ -5,4 +5,8 @@ class Vehicle < ActiveRecord::Base
   validates :make,  presence: true
   validates :model, presence: true
   validates :owner, presence: true
+
+  def to_s
+    "#{year} #{make} #{model}"
+  end
 end

@@ -19,6 +19,31 @@ class VehiclesController < ApplicationController
     end
   end
 
+  def edit
+    @vehicle = current_user.vehicles.find(params[:id])
+  end
+
+  def update
+    @vehicle = current_user.vehicles.find(params[:id])
+
+    if @vehicle.update vehicle_params
+      redirect_to vehicles_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @vehicle = current_user.vehicles.find(params[:id])
+
+    if @vehicle.destroy
+      redirect_to vehicles_path
+    else
+      flash.alert = translate("vehicles.unable_to_delete")
+      redirect_to vehicles_path
+    end
+  end
+
   private
 
   def vehicle_params

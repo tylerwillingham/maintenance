@@ -9,7 +9,7 @@
     <%= vehicle.model %>
   </td>
   <td>
-    <%= vehicle.mileage %>
+    <%= number_with_delimiter vehicle.mileage %>
   </td>
   <td>
     <% if vehicle.currently_owned? %>
@@ -17,5 +17,9 @@
     <% else %>
       <%=t :no %>
     <% end %>
+  </td>
+  <td>
+    <%= link_to t(:edit), edit_vehicle_path(vehicle.id) %>
+    <%= link_to t(:delete), vehicle_path(vehicle.id), method: :delete %> 
   </td>
 </tr>

@@ -10,13 +10,16 @@ RSpec.describe Vehicle, type: :model do
   it { should validate_presence_of(:model) }
   it { should validate_presence_of(:owner) }
 
-  context '.create' do
-    before do
-      @vehicle = create :vehicle
-    end
+  let(:persisted_vehicle) { create :vehicle }
+  let(:unpersisted_vehicle) { build :vehicle }
 
+  context ".create" do
     it 'assumes this vehicle is currently_owned by default' do
-      expect(@vehicle.currently_owned).to eq(true)
+      expect(persisted_vehicle.currently_owned).to eq(true)
     end
+  end
+
+  it "should respond to .to_s" do
+    expect(unpersisted_vehicle).to respond_to(:to_s)
   end
 end

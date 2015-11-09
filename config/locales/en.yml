@@ -20,6 +20,9 @@ en:
 
   "yes": "Yes"
   "no": "No"
+  "save": "Save"
+  "edit": "Edit"
+  "delete": "Delete"
 
   vehicles:
     year: "Year"
@@ -29,3 +32,4 @@ en:
     current: "Current"
     currently_owned: "Currently Owned"
     your_vehicles: "Your Vehicles"
+    unable_to_delete: "We were unable to delete that vehicle"

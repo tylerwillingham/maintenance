@@ -46,6 +46,40 @@ RSpec.describe VehiclesController, type: :controller do
     end
   end
 
+  describe "GET #edit" do
+    it "returns a 200 (success)" do
+      vehicle = create :vehicle, owner: user
+      sign_in_as user
+
+      get :edit, id: vehicle.id
+
+      expect(response).to have_http_status(:success)
+    end
+
+    it "assigns @vehicle" do
+      vehicle = create :vehicle, owner: user
+      sign_in_as user
+
+      get :edit, id: vehicle.id
+
+      expect(assigns(:vehicle)).to eq(vehicle)
+    end
+  end
+
+  describe "PUT #update" do
+    it "updates a vehicle" do
+      vehicle = create :vehicle, owner: user
+      sign_in_as user
+      new_mileage = vehicle.mileage += 19_000
+
+      put :update, id: vehicle.id, vehicle: { mileage: new_mileage }
+
+      vehicle.reload
+      expect(vehicle.mileage).to eq(new_mileage)
+      expect(response).to redirect_to(vehicles_path)
+    end
+  end
+
   describe "POST #create" do
     it "creates a new vehicle" do
       sign_in_as user
@@ -73,6 +107,18 @@ RSpec.describe VehiclesController, type: :controller do
 
         expect(response).to render_template(:new)
       end
+    end
+  end
+
+  describe "DELETE #destroy" do
+    it "destroys the vehicle record" do
+      create :vehicle, owner: user
+      vehicle2 = create :vehicle, owner: user
+      sign_in_as user
+
+      expect do
+        delete :destroy, id: vehicle2.id
+      end.to change { Vehicle.count }.by(-1)
     end
   end
 end
