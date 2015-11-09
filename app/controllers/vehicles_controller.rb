@@ -33,6 +33,17 @@ class VehiclesController < ApplicationController
     end
   end
 
+  def destroy
+    @vehicle = current_user.vehicles.find(params[:id])
+
+    if @vehicle.destroy
+      redirect_to vehicles_path
+    else
+      flash.alert = translate("vehicles.unable_to_delete")
+      redirect_to vehicles_path
+    end
+  end
+
   private
 
   def vehicle_params
