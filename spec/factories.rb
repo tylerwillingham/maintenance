@@ -6,6 +6,14 @@ FactoryGirl.define do
     model "M3"
     vin "WBSWD93558PY39440"
     mileage 69_832.3
+    purchase_date 1.year.ago
+
+    trait :sold do
+      currently_owned false
+      sale_date 10.weeks.ago
+    end
+
+    factory :sold_vehicle, traits: [:sold]
   end
 
   factory :service_record do
