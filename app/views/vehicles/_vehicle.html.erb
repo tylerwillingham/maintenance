@@ -9,7 +9,7 @@
     <%= vehicle.model %>
   </td>
   <td>
-    <%= vehicle.mileage %>
+    <%= number_with_delimiter vehicle.mileage %>
   </td>
   <td>
     <% if vehicle.currently_owned? %>
