@@ -109,4 +109,16 @@ RSpec.describe VehiclesController, type: :controller do
       end
     end
   end
+
+  describe "DELETE #destroy" do
+    it "destroys the vehicle record" do
+      create :vehicle, owner: user
+      vehicle2 = create :vehicle, owner: user
+      sign_in_as user
+
+      expect do
+        delete :destroy, id: vehicle2.id
+      end.to change { Vehicle.count }.by(-1)
+    end
+  end
 end

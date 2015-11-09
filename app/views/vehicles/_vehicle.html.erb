@@ -20,5 +20,6 @@
   </td>
   <td>
     <%= link_to t(:edit), edit_vehicle_path(vehicle.id) %>
+    <%= link_to t(:delete), vehicle_path(vehicle.id), method: :delete %> 
   </td>
 </tr>
